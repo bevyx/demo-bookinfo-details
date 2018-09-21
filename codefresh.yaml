@@ -8,4 +8,5 @@ steps:
   push:
     type: push
     candidate: ${{build}}
+    tag: ${CF_BRANCH_TAG_NORMALIZED}
     registry: dockerhub
