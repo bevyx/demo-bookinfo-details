@@ -4,9 +4,9 @@ steps:
     type: build
     image_name: bevyx/demo-bookinfo-details
     working_directory: ./
-    tag: ${CF_BRANCH_TAG_NORMALIZED}
+    tag: ${{CF_BRANCH_TAG_NORMALIZED}}
   push:
     type: push
     candidate: ${{build}}
-    tag: ${CF_BRANCH_TAG_NORMALIZED}
+    tag: ${{CF_BRANCH_TAG_NORMALIZED}}
     registry: dockerhub
